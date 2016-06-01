@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+  <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
+  <meta http-equiv="refresh" content="3;url=http://52.91.227.37/fk/" />
+</head>
+<body>
+
+
+<!-- {% for c1 in c %}
+
+    qweqwe=  {{c1.status}}
+       
+{% endfor %}
+ 
+{% for c1 in c %}
+
+      Parking Location: {{c1.parking_name}}<br>
+      Parking No: {{c1.parking_no}}<br>
+      Parking Status: {{c1.status}}<br>
+      <br>
+      <br>
+      <br>
+{% endfor %}-->
+<div id="header">
+<img src="{% static 'images/logo.png' %}" alt="Vit logo" height="80" width="220"><h1 id="title">Vit Parking</h1>
+
+</div>
+
+<canvas id="canvas" width="800" height="500" style="border: 1px solid black;">
+
+
+
+<script type="text/javascript">
+
+	var c=document.getElementById("canvas");
+	var ctx=c.getContext("2d");
+	var i=100;
+  var flag=1
+	{% for c1 in c %}
+      
+      ctx.shadowBlur=20;
+ctx.shadowColor="black";
+      if({{c1.status}}==1)
+       	ctx.fillStyle="#ff412f";
+       else
+       	ctx.fillStyle="#00ff3f";
+       ctx.shadowColor="black"
+    	ctx.fillRect(i,70,200,330);
+      ctx.font = "30px Arial";
+      ctx.fillStyle="black";
+      if(flag==1)
+      {
+        ctx.fillText('TT',i+70,200);
+        ctx.fillText('P NO: 1',i+40,250);
+        flag=0
+      }
+       else
+       {
+         ctx.fillText('SJT',i+60,200);
+         ctx.fillText('P NO:1',i+40,250);
+       }
+
+
+    	i=i+400;  
+	{% endfor %}
+	
+	
+	
+
+</script>
+</body>
+</html>

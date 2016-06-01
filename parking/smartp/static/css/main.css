@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #eee;
+}
+
+#header
+{
+    background-color:#3939ac;
+    color:white;
+    /*text-align:center;*/
+    padding:5px;
+    height: 80px;
+    box-shadow: 0px 8px 5px #888888;
+
+
+
+}
+#title
+{
+    position: absolute;
+    left: 40%;
+    top:20px;
+    font: "Times New Roman"    
+}
+
+#canvas
+{
+    position: relative;
+    top: 50px;
+    left: 15%;
+}
+h1 {
+    text-shadow: 2px 2px #000000;
+}

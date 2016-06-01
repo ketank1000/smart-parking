@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+</head>
+<body>
+
+<table style="width:100%">
+  <form action="/update/" method="post" name="update">
+     {% csrf_token %}
+     <input type="text" name="parking_n"></input><br>
+     <input type="text" name="parking_no"></input><br>
+     <input type="text" name="parking_s"></input><br>               
+     <input type="submit" value="submit">
+  </form>
+
+        
+ 
+  {{  p }}
+ 
+{% for c1 in c %}
+
+            {{c1.status}}
+{% endfor %}
+
+</body>
+</html>
